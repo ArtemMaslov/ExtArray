@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="ExtArrayTest.cpp" />
+    <ClCompile Include="ExtArray.cpp" />
+    <ClCompile Include="UtilLib\Logs\Logs.cpp">
+      <Filter>UtilLib\Logs</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilLib\FilesIO\FilesIO.cpp">
+      <Filter>UtilLib\FilesIO</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExtArray.h" />
+    <ClInclude Include="LibsIncludes\inc_string.h">
+      <Filter>LibsIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="LibsIncludes\inc_windows.h">
+      <Filter>LibsIncludes</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\ErrorsHandling.h">
+      <Filter>UtilLib</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\General.h">
+      <Filter>UtilLib</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\TargetOS.h">
+      <Filter>UtilLib</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\Warnings.h">
+      <Filter>UtilLib</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\Logs\Logs.h">
+      <Filter>UtilLib\Logs</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\Logs\logs_config_private.h">
+      <Filter>UtilLib\Logs</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\Logs\LogsConfig.h">
+      <Filter>UtilLib\Logs</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\FilesIO\FilesIO.h">
+      <Filter>UtilLib\FilesIO</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\DisableLogs.h">
+      <Filter>UtilLib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="UtilLib">
+      <UniqueIdentifier>{9cbe9fdd-60c0-4204-84f9-88fd62f35b02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UtilLib\Logs">
+      <UniqueIdentifier>{291af39d-e976-4eeb-9aa7-b791cec1983d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UtilLib\FilesIO">
+      <UniqueIdentifier>{87fd26c2-54b3-4b0c-b9a2-60f1e34a1d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LibsIncludes">
+      <UniqueIdentifier>{32b86fc1-0110-4280-baf7-9d1dbcb36f1d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
