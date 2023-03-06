@@ -2,12 +2,14 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="ExtArrayTest.cpp" />
-    <ClCompile Include="ExtArray.cpp" />
     <ClCompile Include="UtilLib\Logs\Logs.cpp">
       <Filter>UtilLib\Logs</Filter>
     </ClCompile>
     <ClCompile Include="UtilLib\FilesIO\FilesIO.cpp">
       <Filter>UtilLib\FilesIO</Filter>
+    </ClCompile>
+    <ClCompile Include="UtilLib\Errors\Exceptions.cpp">
+      <Filter>UtilLib\Errors</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +47,25 @@
     <ClInclude Include="UtilLib\DisableLogs.h">
       <Filter>UtilLib</Filter>
     </ClInclude>
+    <ClInclude Include="UtilLib\Errors\Exceptions.h">
+      <Filter>UtilLib\Errors</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\Text\StringBuffer.h">
+      <Filter>UtilLib\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\Text\StringBuffer_impl.h">
+      <Filter>UtilLib\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtArray_impl.h" />
+    <ClInclude Include="UtilLib\Logs\CodeLocation.h">
+      <Filter>UtilLib\Logs</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\Text\StringView.h">
+      <Filter>UtilLib\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="UtilLib\Errors\MemoryAllocation_imp.h">
+      <Filter>UtilLib\Errors</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="UtilLib">
@@ -58,6 +79,12 @@
     </Filter>
     <Filter Include="LibsIncludes">
       <UniqueIdentifier>{32b86fc1-0110-4280-baf7-9d1dbcb36f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UtilLib\Errors">
+      <UniqueIdentifier>{4ed999a7-3d64-412e-8c4c-9de94902c145}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UtilLib\Text">
+      <UniqueIdentifier>{9b455d31-e46c-405b-8285-d5a0c20706a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

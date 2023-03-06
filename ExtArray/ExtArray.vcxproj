@@ -94,7 +94,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)LibsIncludes\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4464</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4464;4623;4626;5026;5027;5045</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -111,7 +111,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)LibsIncludes\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4464</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4464;4623;4626;5026;5027;5045</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,7 +128,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)LibsIncludes\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4464</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4464;4623;4626;5026;5027;5045</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,7 +145,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)LibsIncludes\;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4464</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4464;4623;4626;5026;5027;5045</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,10 +155,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ExtArray.cpp" />
     <ClCompile Include="ExtArrayTest.cpp" />
+    <ClCompile Include="UtilLib\Errors\Exceptions.cpp" />
     <ClCompile Include="UtilLib\FilesIO\FilesIO.cpp" />
     <ClCompile Include="UtilLib\Logs\Logs.cpp" />
+    <ClInclude Include="ExtArray_impl.h" />
+    <ClInclude Include="UtilLib\Errors\MemoryAllocation_imp.h" />
+    <ClInclude Include="UtilLib\Logs\CodeLocation.h" />
+    <ClInclude Include="UtilLib\Text\StringBuffer_impl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ExtArray.h" />
@@ -166,12 +175,15 @@
     <ClInclude Include="LibsIncludes\inc_windows.h" />
     <ClInclude Include="UtilLib\DisableLogs.h" />
     <ClInclude Include="UtilLib\ErrorsHandling.h" />
+    <ClInclude Include="UtilLib\Errors\Exceptions.h" />
     <ClInclude Include="UtilLib\FilesIO\FilesIO.h" />
     <ClInclude Include="UtilLib\General.h" />
     <ClInclude Include="UtilLib\Logs\Logs.h" />
     <ClInclude Include="UtilLib\Logs\LogsConfig.h" />
     <ClInclude Include="UtilLib\Logs\logs_config_private.h" />
     <ClInclude Include="UtilLib\TargetOS.h" />
+    <ClInclude Include="UtilLib\Text\StringBuffer.h" />
+    <ClInclude Include="UtilLib\Text\StringView.h" />
     <ClInclude Include="UtilLib\Warnings.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
