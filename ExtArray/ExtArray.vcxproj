@@ -160,7 +160,7 @@
     <ClCompile Include="UtilLib\FilesIO\FilesIO.cpp" />
     <ClCompile Include="UtilLib\Logs\Logs.cpp" />
     <ClInclude Include="ExtArray_impl.h" />
-    <ClInclude Include="UtilLib\Errors\MemoryAllocation_imp.h" />
+    <ClInclude Include="UtilLib\Errors\Exceptions_imp.h" />
     <ClInclude Include="UtilLib\Logs\CodeLocation.h" />
     <ClInclude Include="UtilLib\Text\StringBuffer_impl.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>

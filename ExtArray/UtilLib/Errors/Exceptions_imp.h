@@ -29,6 +29,13 @@ namespace UtilLib
 		Exception(formatStr, location, args)
 	{
 	}
+
+	template <typename ... Args>
+	OutOfRange::OutOfRange(const StringView formatStr, cll_t index, 
+						   const CodeLocation location, Args ... args) :
+		Exception(formatStr, location, args)
+	{
+	}
 }
 
 ///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///

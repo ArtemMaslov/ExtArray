@@ -54,3 +54,20 @@ MemoryAllocation::MemoryAllocation(const StringView formatStr, csize_t memAllocS
 
 ///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
 ///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
+
+OutOfRange::OutOfRange(const StringView message, cll_t index, 
+					   const CodeLocation location) :
+	Exception(message, location),
+	Index(index)
+{
+}
+
+OutOfRange::OutOfRange(const StringView formatStr, cll_t index, 
+					   const CodeLocation location, std::va_list formatStrArgs) :
+	Exception(formatStr, location, formatStrArgs),
+	Index(index)
+{
+}
+
+///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
+///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///

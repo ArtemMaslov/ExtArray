@@ -91,7 +91,7 @@ namespace UtilLib
 	///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
 
 	template <typename T>
-	void ExtArray<T>::AddElem(const T& elem)
+	void ExtArray<T>::PushBack(const T& elem)
 	{
 		if (Size == Capacity)
 			Resize(CODE_LOCATION);
@@ -100,28 +100,69 @@ namespace UtilLib
 	}
 
 	template <typename T>
-	void ExtArray<T>::AddElem(T&& elem)
+	void ExtArray<T>::PushBack(T&& elem)
 	{
 		if (Size == Capacity)
 			Resize(CODE_LOCATION);
 
 		Array[Size++] = std::move(elem);
 	}
+
+	template <typename T>
+	T&& ExtArray<T>::PopBack()
+	{
+		assert(Size > 0);
+		#if MODULTE_EXT_ARRAY_ENABLE_OUT_OF_RANGE
+			if (Size == 0)
+			{
+				LOG_ERR("Попытка извлечь элемент из пустого ExtArray.");
+				Dump(CODE_LOCATION);
+
+				throw OutOfRange(GET_STRING_VIEW("Попытка извлечь элемент из пустого ExtArray."),
+								 static_cast<cll_t>(Size),
+								 CODE_LOCATION);
+			}
+		#endif
+
+		return std::move(Array[Size--]);
+	}
 	
 	template <typename T>
-	T& ExtArray<T>::operator [] (csize_t st)
+	T& ExtArray<T>::operator [] (csize_t index)
 	{
-		assert(st < Size);
+		//assert(index < Size);
+		#if MODULTE_EXT_ARRAY_ENABLE_OUT_OF_RANGE
+			if (index >= Size)
+			{
+				LOG_ERR("Обращение к пустому элементу ExtArray.");
+				Dump(CODE_LOCATION);
 
-		return Array[st];
+				throw OutOfRange(GET_STRING_VIEW("Обращение к пустому элементу ExtArray."),
+								 static_cast<cll_t>(index),
+								 CODE_LOCATION);
+			}
+		#endif
+
+		return Array[index];
 	}
 
 	template <typename T>
-	const T& ExtArray<T>::operator [] (csize_t st) const
+	const T& ExtArray<T>::operator [] (csize_t index) const
 	{
-		assert(st < Size);
+		//assert(index < Size);
+		#if MODULTE_EXT_ARRAY_ENABLE_OUT_OF_RANGE
+			if (index >= Size)
+			{
+				LOG_ERR("Обращение к пустому элементу ExtArray.");
+				Dump(CODE_LOCATION);
 
-		return Array[st];
+				throw OutOfRange(GET_STRING_VIEW("Обращение к пустому элементу ExtArray."),
+								 static_cast<cll_t>(index),
+								 CODE_LOCATION);
+			}
+		#endif
+
+		return Array[index];
 	}
 
 	///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///

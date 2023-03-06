@@ -30,20 +30,21 @@ int main()
 
 	ExtArray<int> arr1(CODE_LOCATION, 4);
 
-	arr1.AddElem(10);
-	arr1.AddElem(40);
-	arr1.AddElem(50);
+	arr1.PushBack(10);
+	arr1.PushBack(40);
+	arr1.PushBack(50);
 
 	arr1[1] = 20;
-	arr1.AddElem(60);
-	arr1.AddElem(70);
+	arr1.PushBack(60);
+	arr1.PushBack(70);
 
-	ExtArray<Float> arr2(CODE_LOCATION, 3);
-	arr2.AddElem({3.14f});
-	arr2.AddElem({2.71f});
-	arr2.AddElem({1.602e-19f});
-	arr2[0].print();
-	arr2[2].print();
+	const ExtArray<Float> arr2(CODE_LOCATION, 3);
+	Float a = arr2[0];
+	//arr2.PushBack({3.14f});
+	//arr2.PushBack({2.71f});
+	//arr2.PushBack({1.602e-19f});
+	//arr2[0].print();
+	//arr2[2].print();
 
 	//Float* arr = new Float[10];
 

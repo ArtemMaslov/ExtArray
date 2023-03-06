@@ -63,7 +63,7 @@
     <ClInclude Include="UtilLib\Text\StringView.h">
       <Filter>UtilLib\Text</Filter>
     </ClInclude>
-    <ClInclude Include="UtilLib\Errors\MemoryAllocation_imp.h">
+    <ClInclude Include="UtilLib\Errors\Exceptions_imp.h">
       <Filter>UtilLib\Errors</Filter>
     </ClInclude>
   </ItemGroup>

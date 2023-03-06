@@ -58,6 +58,26 @@ namespace UtilLib
 	public:
 		csize_t AllocatedMemorySize;
 	};
+
+	///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
+	///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
+
+	class OutOfRange : public Exception
+	{
+	public:
+		OutOfRange(const StringView message, cll_t index, 
+				   const CodeLocation location);
+
+		template <typename ... Args>
+		OutOfRange(const StringView message, cll_t index, 
+				   const CodeLocation location, Args ...);
+
+		OutOfRange(const StringView formatStr, cll_t index, 
+				   const CodeLocation location, std::va_list formatStrArgs);
+
+	public:
+		cll_t Index;
+	};
 }
 
 ///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
