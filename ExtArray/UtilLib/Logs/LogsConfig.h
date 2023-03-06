@@ -27,7 +27,7 @@ namespace UtilLib
 	#define LOGS_FOLDER "_logs" PATH_SEPARATOR
 
 	#if defined(DEBUG)
-		static constexpr bool LOG_GLOBAL_DUBLICATE_TO_CONSOLE = true;
+		static constexpr bool LOG_GLOBAL_DUBLICATE_TO_CONSOLE = false;
 	#else
 		static constexpr bool LOG_GLOBAL_DUBLICATE_TO_CONSOLE = false;
 	#endif // !DEBUG

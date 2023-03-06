@@ -278,7 +278,7 @@ namespace UtilLib
      * @return void.
     */
     #define LOG_DBG(message) \
-        LogLine(message, LogLevel::Debug, LogSignature::General, true)
+        LogLine(message, LogLevel::Debug, LogSignature::General, LOG_GLOBAL_DUBLICATE_TO_CONSOLE)
 
     /**
      * @brief  Сообщение типа [WARNING] в файл General.
@@ -299,7 +299,7 @@ namespace UtilLib
      * @return void.
     */
     #define LOG_WRN(message) \
-        LogLine(message, LogLevel::Warning, LogSignature::General, true)
+        LogLine(message, LogLevel::Warning, LogSignature::General, LOG_GLOBAL_DUBLICATE_TO_CONSOLE)
 
     /**
      * @brief  Сообщение типа [INFO] в файл General.
@@ -320,7 +320,7 @@ namespace UtilLib
      * @return void.
     */
     #define LOG_INFO(message) \
-        LogLine(message, LogLevel::Info, LogSignature::General, true)
+        LogLine(message, LogLevel::Info, LogSignature::General, LOG_GLOBAL_DUBLICATE_TO_CONSOLE)
 
     ///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
     ///***///***///---\\\***\\\***\\\___///***___***\\\___///***///***///---\\\***\\\***///
